@@ -42,6 +42,7 @@ RUN \
   git=1:2.39.2-1.1 \
   git-lfs=3.3.0-1+b5 \
   gnupg=2.2.40-1.1 \
+  hexyl=0.8.0-2+b5 \
   jq=1.6-2.1 \
   locales=2.36-9+deb12u7 \
   luarocks=3.8.0+dfsg1-1 \

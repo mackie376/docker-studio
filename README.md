@@ -14,15 +14,20 @@ docker run -it --rm -e TZ=Asia/Tokyo studio:latest
 ## apt を使ってインストールするパッケージ
 
 - btop
+- ca-certificates
 - curl
 - file
 - gcc
 - git
 - git-lfs
 - gnupg
+- hexyl
 - jq
 - locales
+- luarock
+- libicu-dev
 - make
+- openssh-client
 - openssl
 - rsync
 - tree
