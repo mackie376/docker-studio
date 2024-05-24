@@ -106,7 +106,7 @@ alias e="$EDITOR"
 
 ## ssh-egent
 if [[ -L "${HOME}/.ssh/ssh_auth_sock" ]]; then
-  export SSH_AUTH_SOCK="/host/$(readlink ${HOME}/.ssh/ssh_auth_sock)"
+  export SSH_AUTH_SOCK="/host$(readlink ${HOME}/.ssh/ssh_auth_sock)"
 fi
 
 ## remove duplicate value
