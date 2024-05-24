@@ -27,6 +27,11 @@ path=(
   $path
 )
 
+## ssh-egent
+if [[ -L "${HOME}/.ssh/ssh_auth_sock" ]]; then
+  export SSH_AUTH_SOCK="/host$(readlink ${HOME}/.ssh/ssh_auth_sock)"
+fi
+
 # -- basic options ---------------------------------------------------------
 
 ## enable vi-mode
@@ -103,11 +108,6 @@ alias cat=bat
 alias e="$EDITOR"
 
 # -- post processing -------------------------------------------------------
-
-## ssh-egent
-if [[ -L "${HOME}/.ssh/ssh_auth_sock" ]]; then
-  export SSH_AUTH_SOCK="/host$(readlink ${HOME}/.ssh/ssh_auth_sock)"
-fi
 
 ## remove duplicate value
 typeset -gU path fpath manpath
