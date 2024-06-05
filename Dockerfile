@@ -28,7 +28,7 @@ COPY "${PWD}/data/conf.d/lazygit/" /root/.config/lazygit/
 COPY "${PWD}/data/conf.d/nvim/" /root/.config/nvim/
 COPY "${PWD}/data/conf.d/zsh/" /root/.config/zsh/
 COPY "${PWD}/data/.zshenv" /root/.zshenv
-# COPY "${PWD}/bin/*" /root/.local/bin/
+COPY "${PWD}/data/.editorconfig" /root/.editorconfig
 
 RUN \
   mkdir -p .cache/zsh .local/share/zsh .local/state Projects && \
