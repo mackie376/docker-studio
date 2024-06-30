@@ -22,13 +22,13 @@ ENV \
   LANGUAGE="en_US.UTF-8" \
   LC_ALL="en_US.UTF-8"
 
-COPY "${PWD}/data/conf.d/bat/" /root/.config/bat/
-COPY "${PWD}/data/conf.d/btop/" /root/.config/btop/
-COPY "${PWD}/data/conf.d/lazygit/" /root/.config/lazygit/
-COPY "${PWD}/data/conf.d/nvim/" /root/.config/nvim/
-COPY "${PWD}/data/conf.d/zsh/" /root/.config/zsh/
-COPY "${PWD}/data/.zshenv" /root/.zshenv
-COPY "${PWD}/data/.editorconfig" /root/.editorconfig
+COPY ./data/conf.d/bat/ /root/.config/bat/
+COPY ./data/conf.d/btop/ /root/.config/btop/
+COPY ./data/conf.d/lazygit/ /root/.config/lazygit/
+COPY ./data/conf.d/nvim/ /root/.config/nvim/
+COPY ./data/conf.d/zsh/ /root/.config/zsh/
+COPY ./data/.zshenv /root/.zshenv
+COPY ./data/.editorconfig /root/.editorconfig
 
 RUN \
   mkdir -p .cache/zsh .local/share/zsh .local/state Projects && \
@@ -36,7 +36,7 @@ RUN \
   DEBIAN_FRONTEND=nointeractive apt-get install -y --no-install-recommends \
   btop=1.2.13-1 \
   ca-certificates=20230311 \
-  curl=7.88.1-10+deb12u5 \
+  curl=7.88.1-10+deb12u6 \
   file=1:5.44-3 \
   gcc=4:12.2.0-3 \
   git=1:2.39.2-1.1 \
@@ -54,7 +54,7 @@ RUN \
   tree=2.1.0-1 \
   unzip=6.0-28 \
   wget=1.21.3-1+b2 \
-  zsh=5.9-4+b2 && \
+  zsh=5.9-4+b5 && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* && \
   echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
